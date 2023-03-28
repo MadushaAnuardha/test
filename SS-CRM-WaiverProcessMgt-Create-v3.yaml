@@ -1,0 +1,1848 @@
+openapi: 3.0.1
+info:
+  title: SS-CRM-WaiverProcessMgt-Create
+  version: v1.0
+  description: This API is use for Create Waiver Process Mgt
+servers:
+  - url: 'https://mife.dialog.lk/'
+    description: Generated server url
+paths:
+  /api/waiver-process/upload/request-justification-attachments:
+    post:
+      tags:
+        - aws-file-upload-controller
+      operationId: uploadRequestJustificationAttachments
+      parameters:
+        - name: file
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+              format: binary
+        - name: request-id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/upload/request-calculation-attachments:
+    post:
+      tags:
+        - aws-file-upload-controller
+      operationId: uploadRequestCalculationAttachments
+      parameters:
+        - name: file
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+              format: binary
+        - name: request-id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/upload/request-attachments:
+    post:
+      tags:
+        - aws-file-upload-controller
+      operationId: uploadRequestAttachments
+      parameters:
+        - name: file
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+              format: binary
+        - name: request-id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/upload/feedback-attachments:
+    post:
+      tags:
+        - aws-file-upload-controller
+      operationId: uploadFeedbackAttachments
+      parameters:
+        - name: file
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+              format: binary
+        - name: feedback-id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/upload/correlation-request-attachments:
+    post:
+      tags:
+        - aws-file-upload-controller
+      operationId: uploadCorrelationRequestAttachments
+      parameters:
+        - name: file
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+              format: binary
+        - name: correlation-id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/key/{business-key}/tasks/{task-id}/unassign':
+    post:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: unAssignTask
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/key/{business-key}/tasks/{task-id}/assign':
+    post:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: assignTask
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/key/{business-key}/tasks/{task-id}/assign-to-revalidate':
+    post:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: assignToRevalidateTask
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: createby
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/email/key/{business-key}/tasks/{task-id}/action/{task-action}/email-to-approve':
+    post:
+      tags:
+        - email-controller
+      operationId: emailToApprove
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-action
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: revUserName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: revUserEmail
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/create:
+    post:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: createTask
+      parameters:
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaiverRequestDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/sales-sector-manager/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - sales-sector-manager-controller
+      operationId: completeProcess
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/responsible-person/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - responsible-user-controller
+      operationId: submit
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/non-account-manager/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - non-account-manager-controller
+      operationId: submit_1
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/head-of-sales/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - head-of-sales-controller
+      operationId: completeProcess_1
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-supervisor/key/{business-key}/tasks/{task-id}/supervisor-goodwill-submit':
+    post:
+      tags:
+        - ecs-supervisor-controller
+      operationId: supervisorProcess
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-supervisor/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - ecs-supervisor-controller
+      operationId: completeProcess_2
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-manager/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - esc-senior-manager-controller
+      operationId: completeProcess_3
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-agent/key/{business-key}/tasks/{task-id}/justify':
+    post:
+      tags:
+        - esc-agent-controller
+      operationId: justifyRequest
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaiverRequestDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-agent/key/{business-key}/tasks/{task-id}/justified-system-issue':
+    post:
+      tags:
+        - esc-agent-controller
+      operationId: justifiedSystemIssue
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaiverRequestDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-agent/key/{business-key}/tasks/{task-id}/justified-mistake':
+    post:
+      tags:
+        - esc-agent-controller
+      operationId: justifiedMistake
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaiverRequestDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-agent/key/{business-key}/tasks/{task-id}/justified-goodwill':
+    post:
+      tags:
+        - esc-agent-controller
+      operationId: justifiesGoodwill
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WaiverRequestDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-agent/key/{business-key}/tasks/{task-id}/finalize':
+    post:
+      tags:
+        - esc-agent-controller
+      operationId: finalizeRequest
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/esc-agent/key/{business-key}/tasks/{task-id}/am-nonam-involved':
+    post:
+      tags:
+        - esc-agent-controller
+      operationId: amNonAmInvolved
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: userName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/ManagerDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/cxo/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - cxo-controller
+      operationId: completeProcess_4
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/crm/key/{business-key}/tasks/{task-id}/reject':
+    post:
+      tags:
+        - crm-controller
+      operationId: reject
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/crm/key/{business-key}/tasks/{task-id}/approve':
+    post:
+      tags:
+        - crm-controller
+      operationId: approve
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/v1/waiver-process/account-manager/key/{business-key}/tasks/{task-id}/submit':
+    post:
+      tags:
+        - account-manager-controller
+      operationId: submit_2
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeedbackDto'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/v1/waiver-process/account-manager/autocomplete:
+    post:
+      tags:
+        - account-manager-controller
+      operationId: autoComplete
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/verify-user:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getUser
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/searchable/sub-sub-areas:
+    get:
+      tags:
+        - searchable-controller
+      operationId: getSubSubAreas
+      parameters:
+        - name: subSubArea
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/searchable/sub-areas:
+    get:
+      tags:
+        - searchable-controller
+      operationId: getSubAreas
+      parameters:
+        - name: subArea
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/searchable/lob:
+    get:
+      tags:
+        - searchable-controller
+      operationId: getLob
+      parameters:
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/searchable/area-names:
+    get:
+      tags:
+        - searchable-controller
+      operationId: getAreaNames
+      parameters:
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/key/{business-key}/tasks/{task-id}':
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getRecord
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/key/{business-key}/tasks/{task-id}/feedbacks':
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getFeedbacks
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: task-id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  '/api/waiver-process/key/{business-key}/get-empowerment-map-roles':
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getEmpowermentMapRoles
+      parameters:
+        - name: business-key
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: team
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: segmentName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: sectorName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/get-userRole:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getUserRole
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/get-userNames:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getUserNames
+      parameters:
+        - name: role
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/get-segmentNames:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getSegmentNames
+      parameters:
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/get-sectorNames:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getSectorNames
+      parameters:
+        - name: segmentName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/get-empowermentMap-details:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getEmpowermentMapDetails
+      parameters:
+        - name: segmentName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: sectorName
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/advance_search_result:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getAdvanceSearchResults
+      parameters:
+        - name: fromDate
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+        - name: toDate
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+        - name: segmentName
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: waiverType
+          in: query
+          required: false
+          schema:
+            type: string
+            enum:
+              - RENTAL_WAIVER
+              - SUG_WAIVER
+              - INTEREST_WAIVER
+              - DATA_USAGE_WAIVER
+              - VOICE_USAGE_WAIVER
+              - USAGE_WAIVER
+              - DATA_BUCKET_WAIVER
+              - CONTRACT_COMMENT_WAIVER
+              - FVR_WAIVER
+              - DEVICE_CHARGER_WAIVER
+              - OTC_WAIVER
+              - VAS_WAIVER
+              - GOODWILL
+              - MISTAKE
+              - SYSTEM_ISSUE
+        - name: taskStatus
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: srNumber
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: taskId
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: waiverReferenceNumber
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: offset
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: pageSize
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: traceId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/waiver-process/advance_search:
+    get:
+      tags:
+        - wiver-process-workflow-controller
+      operationId: getAdvanceSearchResult
+      parameters:
+        - name: fromDate
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+        - name: toDate
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+        - name: segmentName
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: waiverType
+          in: query
+          required: false
+          schema:
+            type: string
+            enum:
+              - RENTAL_WAIVER
+              - SUG_WAIVER
+              - INTEREST_WAIVER
+              - DATA_USAGE_WAIVER
+              - VOICE_USAGE_WAIVER
+              - USAGE_WAIVER
+              - DATA_BUCKET_WAIVER
+              - CONTRACT_COMMENT_WAIVER
+              - FVR_WAIVER
+              - DEVICE_CHARGER_WAIVER
+              - OTC_WAIVER
+              - VAS_WAIVER
+              - GOODWILL
+              - MISTAKE
+              - SYSTEM_ISSUE
+        - name: taskStatus
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: srNumber
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: taskId
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: waiverReferenceNumber
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: offset
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: pageSize
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: traceId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/v1/waiver-process/download/attachment:
+    get:
+      tags:
+        - aws-file-download-controller
+      operationId: getAttachment
+      parameters:
+        - name: file-path
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+  /api/number-generation/get-waiverReferenceNumber:
+    get:
+      tags:
+        - number-generation-controller
+      operationId: waiverReferenceNumber
+      parameters:
+        - name: traceId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/WaiverProcessResponse'
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+components:
+  schemas:
+    WaiverProcessResponse:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          format: int32
+        message:
+          type: string
+        data:
+          type: object
+    FeedbackDto:
+      type: object
+      properties:
+        feedbackId:
+          type: integer
+          format: int64
+        userName:
+          type: string
+        role:
+          type: string
+        comment:
+          type: string
+        status:
+          type: string
+        waiverRequest:
+          $ref: '#/components/schemas/WaiverRequestDto'
+        createdDate:
+          type: string
+          format: date-time
+        lastModifiedDate:
+          type: string
+          format: date-time
+        createdBy:
+          type: string
+        lastModifedBy:
+          type: string
+    WaiverRequestDto:
+      type: object
+      properties:
+        requestId:
+          type: integer
+          format: int64
+        correlationId:
+          type: string
+        email:
+          type: string
+        assignee:
+          type: string
+        createdBy:
+          type: string
+        waiverReferenceNo:
+          type: string
+        srNumber:
+          type: string
+        customerReferenceNo:
+          type: string
+        lob:
+          type: string
+        source:
+          type: string
+        area:
+          type: string
+        subArea:
+          type: string
+        subSubArea:
+          type: string
+        businessSegment:
+          type: string
+        srCreatedDate:
+          type: string
+          format: date-time
+        companyName:
+          type: string
+        number:
+          type: string
+        waiverReason:
+          type: string
+        waiverType:
+          type: string
+          enum:
+            - RENTAL_WAIVER
+            - SUG_WAIVER
+            - INTEREST_WAIVER
+            - DATA_USAGE_WAIVER
+            - VOICE_USAGE_WAIVER
+            - USAGE_WAIVER
+            - DATA_BUCKET_WAIVER
+            - CONTRACT_COMMENT_WAIVER
+            - FVR_WAIVER
+            - DEVICE_CHARGER_WAIVER
+            - OTC_WAIVER
+            - VAS_WAIVER
+            - GOODWILL
+            - MISTAKE
+            - SYSTEM_ISSUE
+        waiverAmount:
+          type: string
+        periodStart:
+          type: string
+          format: date-time
+        periodEnd:
+          type: string
+          format: date-time
+        ownershipDivision:
+          type: string
+        ownershipSector:
+          type: string
+        reposibilityEmployeeNumber:
+          type: string
+        accountManager:
+          type: string
+        arpuValue:
+          type: number
+          format: double
+        alternativeContactNumber:
+          type: string
+        modificationCorrectionStatus:
+          type: string
+        backgroundReason:
+          type: string
+        amOrNonAm:
+          type: string
+        summaryJustification:
+          type: string
+        sbu:
+          type: string
+        summaryJustificationRemarks:
+          type: string
+        justificationStatus:
+          type: boolean
+        waiverCalculation:
+          type: string
+        budgetCode:
+          type: string
+        remarksToCrm:
+          type: string
+        specialRemark:
+          type: string
+        assigneeEmail:
+          type: string
+        createdDate:
+          type: string
+          format: date-time
+        lastModifiedDate:
+          type: string
+          format: date-time
+        lastModifedBy:
+          type: string
+        systemIssue:
+          type: boolean
+        goodwill:
+          type: boolean
+    ManagerDto:
+      type: object
+      properties:
+        userName:
+          type: string
+        email:
+          type: string
+        type:
+          type: string
